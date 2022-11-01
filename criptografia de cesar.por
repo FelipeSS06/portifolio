@@ -52,19 +52,47 @@ programa
 		
 	}
 
-	funcao descriptografar(){
-		//desafio
+	cadeia alfabetoInvertido[26] = {"z","y","x","w","v","u","t","s","r","q","p","o","n","m","l","k","j","i","h","g","f","e","d","c","b","a"} 
+	
+	inteiro chave = 0
+
+	cadeia frase
+	
+        funcao descriptografar(){
+
+	
+			escreva("qual a frase a ser descriptografada? ")
+		leia(frase)
+
+		escreva("Qual a cahve desejada?")
+		leia(chave)
+
+		inteiro numeroLetras = t.numero_caracteres(frase)
+
+		escreva("a frase tem ", numeroLetras, " letras. \n")
+
+		para(inteiro i=0; i< numeroLetras; i++){
+			
+			
+			cadeia letraConvertida = ti.caracter_para_cadeia(t.obter_caracter(frase, i)) 
+			
+                
+                   
+               u.aguarde(1000)
+
+               para(inteiro j=0; j < 26; j++){
+
+                  se(letraConvertida == alfabetoInvertido[j]){
+                       //escreva("a letra ", letraConvertida, " está na posicao ", j, "\n")
+
+                       inteiro posicaoCriptografada = j + chave
+
+                       escreva(alfabetoInvertido[posicaoCriptografada])
+                        pare 
+     	
+                  }
+                }
+              }
+
+              
 	}
-}
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 438; 
- * @DOBRAMENTO-CODIGO = [23];
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {alfabeto, 7, 8, 8};
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
